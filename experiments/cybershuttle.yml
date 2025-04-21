@@ -1,13 +1,14 @@
 project:
-  name: One-hot HMM-GLM.
-  version: 0.1.0
-  description: GLM with a one-hot prior on top of a hidden Markov model.
-  tags:
-    - neuroscience
-    - generalized_linear_models
-    - hidden_markov_models
-    - functional_connectivity_inference
+  name: "One-hot Generalized Linear Model for Switching Brain State Discovery"
+  description: "Reproducing the One-hot HMM-GLM paper (ICLR 2024)"
   homepage: https://github.com/BRAINML-GT/onehot-hmmglm
+  authors:
+    - Anqi Wu
+    - Chengrui Li
+  tags:
+    - neurodata25
+    - brainml-gt
+    - hmm-glm
 
 workspace:
   location: /workspace
@@ -15,7 +16,8 @@ workspace:
     min_cpu: 4
     min_gpu: 0
     min_mem: 4096
-  model_collection:
+    gpu_mem: 1024
+  model_collection: []
   data_collection:
     - source: cybershuttle
       identifier: brainml-onehot-hmmglm
@@ -26,5 +28,6 @@ additional_dependencies:
     - python=3.10
     - pip
     - ipywidgets
+    - seaborn
   pip:
     - git+https://github.com/cyber-shuttle/onehot-hmmglm#subdirectory=hmmglm
