@@ -29,5 +29,6 @@ additional_dependencies:
     - pip
     - ipywidgets
     - seaborn
+    - ffmpeg
   pip:
     - git+https://github.com/cyber-shuttle/onehot-hmmglm#subdirectory=hmmglm
